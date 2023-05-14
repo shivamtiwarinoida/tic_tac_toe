@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shiv s Web</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div>Code<span>Js</span></div>
+        <div class="list">
+            <button onclick="showAbout()">Game</button>
+            <button id="me" onclick="showMe()">Me</button>
+        </div>
+        <div class="about" id="about1">
+            <h2>Tic-Tac-Toe</h2>
+            <p>Tic tac toe is a great mental exercise used to improve the thought process in children and adults, tic
+                tac toe is believed to be the oldest game in history but it is still played today ... I tried to create
+                it please check it out</p>
+        </div>
+        <div class="me" id="me1">
+            <h2>Myself</h2>
+            <p>Hello Everyone , my name is Shivam and I am a student of Electronics Engineering at Mnit Jaipur. I want to work as 
+                a software engineer in any tech based company located in Gurgaon .So ,  I will keep telling you all my journey from 
+                jaipur to delhi and may be to gurgaom ... thats all from my side thanks for visiting on my website..
+            </p>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="info"><span id="info"></span></div>
+        <div class="game" id="gameboard">
+            <div class="square" id="0"></div>
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+        </div>
+        <button class="btn" id="start1" onclick="document.location.reload()">Start Again</button>
+    </div>
+
+    <div class="form" id="form1">
+        <h2><u>Start</u></h2>
+        <p>PLease Enter the Name of Player before starting the Game</p>
+            <div>
+                <label for="player1">player 1: </label>
+                <input type="text" placeholder="player1" name="player1" id="play1">
+            </div>
+            <div>
+                <label for="player2">player 2: </label>
+                <input type="text" placeholder="player2" name="player2" id="play2">
+            </div>
+            <button onclick="remMsg()">Play</button>
+    </div>
+    <footer class="foot">copyright &#169 to am_shiv</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background: url("back3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    height: auto;
+    width: 80%;
+    min-width:160px;
+    background-color: blue;
+    flex-direction: column;
+    margin:7rem auto;
+    border: 0.15rem solid navy;
+    border-radius: 0.6rem;
+    box-shadow: 0.6rem 0.6rem 0.6rem rgb(255, 1, 255);
+}
+
+
+
+.game{
+    width: 302px;
+    height: 302px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.info{
+    font-size: 1.2rem;
+    color: aliceblue;
+    padding: 0.8rem;
+    margin: 0.6rem;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    height: 90px;
+    width: 90px;
+    border: 15px solid blue;
+    border-radius:50% ;
+}
+
+.cross{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform:rotate(45deg) ;
+}
+
+.cross::before, .cross::after{
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+
+.cross:before{
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+
+.cross:after{
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
+
+
+.navbar{
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    text-align: center;
+    position: sticky;
+    top:0;
+}
+
+.navbar span{
+    color: red;
+}
+
+.navbar:hover{
+    background-color:navy;
+    cursor: pointer;
+}
+
+.foot{
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+}
+
+.foot:hover{
+    background-color: navy;
+}
+
+.btn{
+    background-color: red;
+    border: 0.1rem solid white;
+    border-radius: 0.6rem;
+    color:white;
+    padding: 0.7rem;
+    margin: 0.7rem;
+    font-size: 1.2rem;
+}
+
+.about{
+    text-align: left;
+    overflow-wrap: break-word;
+    height: 0px;
+    overflow: hidden;
+    transition: width 2s, height 4s;
+    text-decoration: none;
+}
+
+.me{
+    text-align: left;
+    overflow-wrap: break-word;
+    height: 0px;
+    display: none;
+    overflow: hidden;
+    transition: width 2s, height 4s;
+    text-decoration: none;
+}
+
+.autoh{
+    border: 0.1rem solid white;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    padding: 1rem;
+    height: auto;
+    display: block;
+}
+
+.list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.3rem;
+}
+
+.list button{
+    box-shadow: none;
+    border: 0.1rem solid black;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 0.6rem;
+}
+
+.list:hover button{
+    background-color: navy;
+    border: 0.1rem solid navy;
+}
+
+
+
+.form{
+    box-shadow: 0.5rem 0.5rem 0.7rem rgb(252, 1, 252);
+    background-color: white;
+    color: black;
+    width: 40%;
+    height: auto;
+    border: 0.1rem solid black;
+    border-radius: 0.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top:-50%;
+    left: 50%;
+    min-width: 290px;
+    padding: 0.6rem;
+    transform: translate(-50%,-50%);
+    transition: top 1s;
+}
+
+.top50{
+    top:50%;
+}
+
+.form label{
+    display: inline-block;
+}
+
+.form input{
+    width: auto;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    border: 0.1rem solid black;
+    border-radius: 0.7rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgb(252, 1, 252);
+}
+
+.form button{
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    border:0.1rem solid black;
+    border-radius: 0.7rem;
+    margin: 0.4rem;
+    padding: 0.4rem 0.6rem;
+    box-shadow: 0.4rem 0.4rem 0.7rem rgb(252, 1, 252); 
+}
+
+
+@media  (max-width:390px) {
+    .game{
+        width: 152px;
+        height: 152px;
+    }
+
+    .square{
+        width: 50px;
+        height: 50px;
+    }
+
+    .cross, .circle{
+        width: 45px;
+        height: 45px;
+    }
+
+    .form input{
+        padding: 0.1rem;
+    }
+}
+
+
+@media (max-width:490px) {
+    .form{
+        width: 59%;
+    }
+}
